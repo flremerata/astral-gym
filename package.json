@@ -1,37 +1,28 @@
 {
-  "name": "astral-gym-management",
-  "version": "2.0.0",
-  "description": "Professional Gym Management System with AI-assisted reminders",
-  "main": "index.html",
+  "name": "astral-gym-system",
+  "version": "1.0.0",
+  "description": "Astral Gym Management System - Vercel Ready",
   "scripts": {
-    "start": "python -m http.server 8000",
-    "dev": "python -m http.server 8000",
-    "build": "echo 'Build process here'",
-    "deploy": "echo 'Ready for deployment'"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
   },
-  "keywords": [
-    "gym",
-    "management",
-    "system",
-    "membership",
-    "fitness"
-  ],
-  "author": "ASTRAL",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourusername/astral-gym"
-  },
-  "engines": {
-    "node": ">=14.0.0"
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^14.0.0"
   },
   "devDependencies": {
-    "http-server": "^14.0.0"
-  },
-  "deployment": {
-    "platforms": ["Vercel", "Firebase", "Heroku", "GitHub Pages", "Docker"],
-    "requiredFiles": ["index.html", "css/styles.css", "js/config.js", "js/app.js", "js/api.js"],
-    "version": "2.0",
-    "buildDate": "2024"
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.6",
+    "eslint": "^8.55.0",
+    "eslint-config-next": "^14.0.4"
   }
 }
