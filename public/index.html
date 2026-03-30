@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Gym Management System v2.0">
+  <meta name="theme-color" content="#0a0a0f">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Astral Gym — Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+<div class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo-block">
+      <div class="logo-top">ASTRAL</div>
+      <div class="logo-sub">Gym Management · v2.0</div>
+    </div>
+    <nav class="nav">
+      <div class="nav-label">Main</div>
+      <div class="nav-item active" onclick="navigate('dashboard',this)">
+        <span class="icon">⚡</span> Dashboard
+      </div>
+      <div class="nav-item" onclick="navigate('members',this)">
+        <span class="icon">👥</span> Members
+      </div>
+      <div class="nav-item" onclick="navigate('sales',this)">
+        <span class="icon">💳</span> Sales & Payments
+      </div>
+      <div class="nav-label">Tools</div>
+      <div class="nav-item" onclick="navigate('reminders',this)">
+        <span class="icon">🤖</span> AI Reminders
+        <span class="nav-badge">5</span>
+      </div>
+      <div class="nav-item" onclick="navigate('attendance',this)">
+        <span class="icon">📋</span> Attendance
+      </div>
+      <div class="nav-item" onclick="navigate('reports',this)">
+        <span class="icon">📊</span> Reports
+      </div>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="staff-card">
+        <div class="staff-avatar">JR</div>
+        <div>
+          <div class="staff-name">James Reyes</div>
+          <div class="staff-role">Manager · Admin</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div>
+        <span class="topbar-title" id="topbar-title">DASHBOARD</span>
+        <span class="topbar-date" id="topbar-date"></span>
+      </div>
+      <div class="topbar-right">
+        <input type="text" class="search-bar" placeholder="Search members, transactions…" oninput="handleSearch(this.value)" id="global-search">
+        <button class="btn btn-accent" onclick="openModal('add-member-modal')">+ New Member</button>
+      </div>
+    </div>
+
+    <!-- ...existing code... -->
+    <!-- All 6 pages: Dashboard, Members, Sales, Reminders, Attendance, Reports -->
+    <!-- Copy full page content from astral_gym_system (1).html -->
+
+  </main>
+</div>
+
+<!-- MODALS -->
+<!-- ...existing code... -->
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toast-container"></div>
+
+<!-- SCRIPTS -->
+<script src="./js/config.js"></script>
+<script src="./js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
