@@ -107,6 +107,18 @@ class APIService {
 // Initialize API service
 const apiService = new APIService(CONFIG.apiBaseUrl);
 
+// API handler for Astral Gym System
+const API = {
+  request: async (endpoint, options = {}) => {
+    const url = `${CONFIG.apiBaseUrl}${endpoint}`;
+    const response = await fetch(url, {
+      headers: { 'Content-Type': 'application/json', ...options.headers },
+      ...options
+    });
+    return response.json();
+  }
+};
+
 // ── NOTIFICATION SERVICE ──
 class NotificationService {
   static send(title, options = {}) {

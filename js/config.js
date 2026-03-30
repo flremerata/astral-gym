@@ -1,5 +1,12 @@
-// ── PRODUCTION CONFIGURATION ──
+// Configuration file for Astral Gym System
 const CONFIG = {
+  apiBaseUrl: process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3000',
+  version: '2.0.0',
+  appName: 'Astral Gym'
+};
+
+// ── PRODUCTION CONFIGURATION ──
+const PRODUCTION_CONFIG = {
   environment: 'production',
   apiBaseUrl: localStorage.getItem('ASTRAL_API_URL') || 'http://localhost:3000/api',
   enableLogging: false,
