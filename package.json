@@ -1,0 +1,37 @@
+{
+  "name": "astral-gym-management",
+  "version": "2.0.0",
+  "description": "Professional Gym Management System with AI-assisted reminders",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Build process here'",
+    "deploy": "echo 'Ready for deployment'"
+  },
+  "keywords": [
+    "gym",
+    "management",
+    "system",
+    "membership",
+    "fitness"
+  ],
+  "author": "ASTRAL",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/astral-gym"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.0.0"
+  },
+  "deployment": {
+    "platforms": ["Vercel", "Firebase", "Heroku", "GitHub Pages", "Docker"],
+    "requiredFiles": ["index.html", "css/styles.css", "js/config.js", "js/app.js", "js/api.js"],
+    "version": "2.0",
+    "buildDate": "2024"
+  }
+}

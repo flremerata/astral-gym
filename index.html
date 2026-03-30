@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="Professional Gym Management System v2.0">
+  <meta name="theme-color" content="#0a0a0f">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Astral Gym — Management System v2.0</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="login-page" class="login-container">
+  <div class="login-box">
+    <div class="logo-top">ASTRAL</div>
+    <div class="logo-sub">Gym Management · v2.0</div>
+    <form onsubmit="login(event)">
+      <input type="text" placeholder="Username" id="login-username" required>
+      <input type="password" placeholder="Password" id="login-password" required>
+      <button type="submit" class="btn btn-accent">Sign In</button>
+      <div style="margin-top:16px;font-size:11px;color:var(--muted)">
+        Demo: admin / password
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="app-page" style="display:none">
+
+<div class="app">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo-block">
+      <div class="logo-top">ASTRAL</div>
+      <div class="logo-sub">Gym Management · v2.0</div>
+    </div>
+    <nav class="nav">
+      <div class="nav-label">Main</div>
+      <div class="nav-item active" onclick="navigate('dashboard',this)">
+        <span class="icon">⚡</span> Dashboard
+      </div>
+      <div class="nav-item" onclick="navigate('members',this)">
+        <span class="icon">👥</span> Members
+      </div>
+      <div class="nav-item" onclick="navigate('sales',this)">
+        <span class="icon">💳</span> Sales & Payments
+      </div>
+      <div class="nav-label">Tools</div>
+      <div class="nav-item" onclick="navigate('reminders',this)">
+        <span class="icon">🤖</span> AI Reminders
+        <span class="nav-badge">5</span>
+      </div>
+      <div class="nav-item" onclick="navigate('attendance',this)">
+        <span class="icon">📋</span> Attendance
+      </div>
+      <div class="nav-item" onclick="navigate('reports',this)">
+        <span class="icon">📊</span> Reports
+      </div>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="staff-card">
+        <div class="staff-avatar" title="Manager: James Reyes">JR</div>
+        <div style="flex:1">
+          <div class="staff-name">James Reyes</div>
+          <div class="staff-role">Manager · Admin</div>
+        </div>
+        <button class="btn btn-ghost btn-sm" onclick="logout()" title="Logout" style="padding:4px 8px;font-size:14px">⚙️</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div>
+        <span class="topbar-title" id="topbar-title">DASHBOARD</span>
+        <span class="topbar-date" id="topbar-date"></span>
+      </div>
+      <div class="topbar-right">
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">🌙</button>
+        <input type="text" class="search-bar" placeholder="Search members, transactions…" oninput="handleSearch(this.value)" id="global-search">
+        <button class="btn btn-accent" onclick="openModal('add-member-modal')">+ New Member</button>
+      </div>
+    </div>
+
+    <!-- PAGES PLACEHOLDER -->
+    <!-- Dashboard, Members, Sales, Attendance, Reminders, Reports pages go here -->
+    <!-- Each page is dynamically loaded from the full application -->
+
+    <div class="page active" id="page-dashboard" style="padding:32px">
+      <div class="section-header">
+        <div class="section-title">Dashboard</div>
+      </div>
+      <div style="text-align:center;padding:40px;color:var(--muted)">
+        <p>Full application content loads here</p>
+        <p style="font-size:12px;margin-top:8px">See full astral_gym_system.html for complete implementation</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+</div>
+
+<!-- MODALS -->
+<!-- All modals referenced in app.js -->
+
+<!-- SCRIPTS -->
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
